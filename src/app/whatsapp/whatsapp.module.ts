@@ -7,6 +7,9 @@ import { WhatsappPresentationComponent } from './whatsapp-container/whatsapp-pre
 import { ChatHeaderPresentationComponent } from './whatsapp-container/whatsapp-presentation/chat-header-presentation/chat-header-presentation.component';
 import { ChatPresentationComponent } from './whatsapp-container/whatsapp-presentation/chat-presentation/chat-presentation.component';
 import { WhatsappService } from './whatsapp.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonService } from '../shared/services/common.service';
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { WhatsappService } from './whatsapp.service';
   ],
   imports: [
     CommonModule,
-    WhatsappRoutingModule
+    WhatsappRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers:[
     WhatsappService

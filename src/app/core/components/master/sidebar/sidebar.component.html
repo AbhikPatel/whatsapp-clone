@@ -1,1 +1,32 @@
-<p>sidebar works!</p>
+<!-- Start: Sidebar section  -->
+<div class="h-100 d-flex flex-column">
+
+    <!-- Sidebar Header  -->
+    <div id="header" class="d-flex justify-content-between align-items-center bg-whatsapp-light px-3">
+        <figure class="m-0">
+            <img src="../../../../../assets/images/jordan poole.jpg" class="rounded-circle header-img" alt="profile">
+        </figure>
+        <span class="fs-4">
+            <i class='bx bx-dots-vertical-rounded'></i>
+        </span>
+    </div>
+
+    <!-- All User Chats  -->
+    <div class="users-container flex-grow-1">
+        <div class="user-chat d-flex align-items-center px-2" role="button" *ngFor="let data of users" (click)="onUser(data.id)" [ngClass]="{'current-chat' : data.id === currentId }">
+            <figure class="m-0 me-2 p-2">
+                <img src="../../../../../assets/images/John Collins.jpg" class="rounded-circle profile-img" alt="profile">
+            </figure>
+            <div class="d-flex flex-column justify-content-between w-100 py-3 border-bottom">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="fw-light"> {{data.firstName + ' ' + data.lastName}} </h5>
+                    <span class="fs-7 text-muted">10:25 pm</span>
+                </div>
+                <div class="d-flex align-items-center justify-content-between">
+                    <span class="fs-7 text-muted text-truncate" style="width: 300px"> {{getLastMessage(data.chats)}} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End: Sidebar section  -->

@@ -1,1 +1,8 @@
-<p>whatsapp-presentation works!</p>
+<div class="h-100 d-flex flex-column">
+    <div id="header">
+        <app-chat-header-presentation [getUser]="getChats"></app-chat-header-presentation>
+    </div>
+    <div class="flex-grow-1 overflow-auto">
+        <app-chat-presentation [chats]="chatsData" (emitMessage)="getMessage($event)"></app-chat-presentation>
+    </div>
+</div>

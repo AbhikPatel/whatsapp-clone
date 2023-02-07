@@ -1,1 +1,11 @@
 // Footer styles goes here
+.user-chat{
+    background-color: $white;
+    &:hover{
+        background-color: #f7f6f6;
+    }
+}
+
+.current-chat{
+    background-color: #f7f6f6;
+}

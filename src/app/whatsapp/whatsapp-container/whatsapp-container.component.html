@@ -1,1 +1,4 @@
-<p>whatsapp-container works!</p>
+<app-whatsapp-presentation
+    [getChats]="getChatsData | async"
+    (emitChat)="getNewMessage($event)"
+></app-whatsapp-presentation>

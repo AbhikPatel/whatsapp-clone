@@ -1,0 +1,104 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Mrunal",
+      "lastName": "Patel",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "Hello There",
+          "isSender": true,
+          "time": ""
+        },
+        {
+          "isSeen": false,
+          "content": "Hello There avi",
+          "isSender": true,
+          "time": ""
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "oye"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Mehul",
+      "lastName": "Patel",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "Hello There",
+          "isSender": true,
+          "time": ""
+        },
+        {
+          "isSeen": false,
+          "content": "Hello There Abhishek",
+          "isSender": false,
+          "time": ""
+        },
+        {
+          "isSeen": false,
+          "content": "How are you?",
+          "isSender": true,
+          "time": ""
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "hello'"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "cacaca"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "anvka"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "aavvav"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "cacacacc"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Est qui cupiditate eum impedit, eligendi magni eaque explicabo placeat, neque laudantium optio, similique cumque dolor nihil possimus. Quos alias deserunt error repellat cumque veniam explicabo hic. Doloribus, enim quasi placeat voluptatibus mollitia magni amet tempore beatae ratione provident ipsam cupiditate officia ex fugit cumque non temporibus asperiores unde minima molestiae! Mollitia veritatis eius quia iusto distinctio laudantium beatae, magni quae non odio nobis, incidunt qui debitis ducimus quasi culpa, sed molestias asperiores tenetur earum ullam sit. Quisquam amet fuga blanditiis iure repudiandae tempora molestias itaque consectetur maxime, repellat, nemo eligendi tempore eum veniam autem magnam alias dolorum ducimus nihil ipsum! Nesciunt minus optio molestiae quam nulla, deserunt commodi similique nostrum earum, placeat corporis accusantium id. Autem omnis nostrum repellendus eveniet consequatur quasi esse corrupti quae molestias quis voluptas quia aut sint voluptate blanditiis, ullam officiis cum explicabo nesciunt labore assumenda architecto fugiat quaerat ea? Quis corporis, consequuntur corrupti similique quod ducimus numquam sapiente tempore molestias dolor deleniti obcaecati earum nam eveniet tempora et vero commodi cupiditate? Inventore autem nesciunt laboriosam amet? Nostrum totam, ipsa ducimus tenetur nihil, eos, magni esse a quae quis animi maxime cupiditate explicabo tempore officia ipsum magnam ad id deleniti numquam enim eaque similique maiores? Iusto nihil facere molestiae omnis sunt modi quia aliquam dolorum, rem voluptate beatae, rerum natus totam assumenda itaque vero expedita quo, quibusdam veritatis obcaecati consectetur molestias dicta? Natus, beatae tempore quod corporis deleniti commodi hic voluptate vero enim perferendis ad repellat sapiente accusamus animi. Excepturi laborum, amet aspernatur earum minus hic quam temporibus dolore eaque qui tenetur error nihil nulla dignissimos, illo, adipisci blanditiis aut? Ea, doloremque explicabo fugit molestias reiciendis asperiores natus saepe laudantium suscipit eius accusantium ab vero perspiciatis temporibus iste quibusdam aperiam necessitatibus quo. Voluptate voluptatem vel provident nihil dolor! Dolorum voluptatum ducimus beatae animi, nesciunt facere perferendis! Consequatur impedit dolores, unde ex commodi recusandae voluptate eius temporibus possimus excepturi et animi, neque iusto amet dolorum, quia earum cum accusantium nihil quod magnam rerum laborum ducimus maiores. Aliquam corrupti perspiciatis cum aperiam, modi nemo non nisi totam quasi est unde, quam veniam temporibus, asperiores magnam! Quam illum architecto consequatur minus laudantium eius placeat non modi accusamus, illo quod soluta et totam? Aut, recusandae error eaque omnis consequatur dolor, praesentium aliquam a debitis veniam, iste cum voluptates esse consequuntur amet libero dignissimos impedit accusantium alias provident eum quae? Quod maiores pariatur iste ab mollitia necessitatibus quis animi explicabo corrupti neque facilis consequuntur sit labore eos nesciunt, quas doloribus delectus laboriosam? Porro nesciunt necessitatibus impedit tenetur obcaecati? Eveniet sed eum eligendi, possimus libero sit id ratione aliquid nisi quisquam provident consectetur debitis tempore ea architecto iusto sint suscipit corrupti aut excepturi facilis aspernatur magnam vero veritatis! Et natus, vero nisi id saepe repellat quidem necessitatibus quibusdam aut obcaecati accusamus tempore alias quas ipsum! Provident quis voluptate esse eveniet facere explicabo non totam, maxime, laudantium ipsam iusto cumque saepe fugiat nobis ad labore. Eius autem iste dolores, corrupti ea sit eos temporibus!"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "hello"
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "content": "hello"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { WhatsappService } from '../whatsapp.service';
+import { Observable } from 'rxjs';
+import { UserChat } from 'src/app/shared/model/user.model';
+import { CommonService } from 'src/app/shared/services/common.service';
 
 @Component({
   selector: 'app-whatsapp-container',
@@ -7,11 +9,19 @@ import { WhatsappService } from '../whatsapp.service';
 })
 export class WhatsappContainerComponent implements OnInit {
 
-  constructor(
-    private _service: WhatsappService
-  ) { }
+  public getChatsData:Observable<UserChat>
 
-  ngOnInit(): void {
+  constructor(
+    private _service: CommonService
+  ) { 
+    this.getChatsData = new Observable();
   }
 
+  ngOnInit(): void {
+    this._service.userId.subscribe((number) => this.getChatsData = this._service.getUserChats(number))
+  }
+
+  public getNewMessage(data:UserChat){
+    this._service.upDateChat(data.id, data).subscribe()
+  }
 }

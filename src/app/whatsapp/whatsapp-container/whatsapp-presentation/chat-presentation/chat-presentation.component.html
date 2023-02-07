@@ -1,1 +1,18 @@
-<p>chat-presentation works!</p>
+<div class="d-flex flex-column h-100 overflow-hidden">
+    <div class="chat-container flex-grow-1 p-5 overflow-auto" #goToBottom>
+        <div class="d-flex py-2" *ngFor="let data of chats"
+            [ngClass]="data.isSender ? 'justify-content-end' : 'justify-content-start'">
+            <div class="message rounded-2 position-relative" [ngClass]="data.isSender ? 'message-sender' : 'bg-white'">
+                <span> {{data.content}}</span>
+                <span class="message-time position-absolute text-muted"> 5:54 pm <i class='bx bx-check'></i></span>
+            </div>
+        </div>
+    </div>
+    <form class="form-container px-3 d-flex align-items-center" [formGroup]="chatGroup" (ngSubmit)="onSubmit()">
+        <input type="text" name="message" id="message" class="w-100 me-2 form-control" autocomplete="off"
+            formControlName="content">
+        <button role="button" type="submit" class="border-0 bg-transparent">
+            <i class='bx bxs-send fs-4'></i>
+        </button>
+    </form>
+</div>

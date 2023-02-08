@@ -11,7 +11,7 @@ import { WhatsappPresenterService } from '../whatsapp-presenter/whatsapp-present
 export class WhatsappPresentationComponent implements OnInit {
 
   @Input() public set getChats(v: UserChat | null) {
-    if (v){
+    if (v) {
       this._getChats = v;
       this.splitData(v);
     }
@@ -21,9 +21,18 @@ export class WhatsappPresentationComponent implements OnInit {
     return this._getChats;
   }
 
-  @Output() public emitChat:EventEmitter<UserChat>;
+  @Input() public set getSendersChat(v: UserChat[] | null) {
+    this._getSendersChat = v;
+  }
+  public get getSendersChat(): UserChat[] | null {
+    return this._getSendersChat;
+  }
+
+
+  @Output() public emitChat: EventEmitter<UserChat>;
 
   private _getChats: UserChat | null;
+  private _getSendersChat: UserChat[] | null;
   public chatsData: Chat[];
 
   constructor(
@@ -31,20 +40,31 @@ export class WhatsappPresentationComponent implements OnInit {
   ) {
     this.chatsData = [];
     this._getChats = null;
+    this._getSendersChat = [];
     this.emitChat = new EventEmitter();
   }
 
   ngOnInit(): void {
   }
 
-  public splitData(data:UserChat){
+  public splitData(data: UserChat) {
+    data.chats.map((items) => items.newMessage = false)
     this.chatsData = data.chats
+    this.emitChat.emit(data)
   }
 
-  public getMessage(data:Chat){
-    if(this.getChats){
-      this.getChats.chats.push(data);
-      this.emitChat.emit(this.getChats);
+  public getMessage(data: any) {
+    if (data.sender) {
+      if (this.getSendersChat) {
+        let currentUser = this.getSendersChat.find((items) => items.firstName === data.sender)
+        currentUser?.chats.push(data);
+        this.emitChat.emit(currentUser);
+      }
+    } else {
+      if (this.getChats) {
+        this.getChats.chats.push(data);
+        this.emitChat.emit(this.getChats);
+      }
     }
   }
 

@@ -9,12 +9,14 @@ export class CommonService {
 
   public api: string = 'http://localhost:3000';
   public userId: BehaviorSubject<number>;
+  public changesOnSidebar: BehaviorSubject<boolean>;
 
   constructor(
     private _http: HttpClient
   ) {
     let number = localStorage.getItem('id')
     number ? this.userId = new BehaviorSubject(JSON.parse(number)) : this.userId = new BehaviorSubject(1);
+    this.changesOnSidebar = new BehaviorSubject(false);
   }
 
   public getAllUserChats(): Observable<UserChat[]> {

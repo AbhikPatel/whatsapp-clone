@@ -20,10 +20,14 @@
             <div class="d-flex flex-column justify-content-between w-100 py-3 border-bottom">
                 <div class="d-flex align-items-center justify-content-between">
                     <h5 class="fw-light"> {{data.firstName + ' ' + data.lastName}} </h5>
-                    <span class="fs-7 text-muted">10:25 pm</span>
+                    <span class="fs-7" [ngClass]="getNewMessages(data.chats) === 0 ? 'text-muted' : 'text-primary'">10:25 pm</span>
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
-                    <span class="fs-7 text-muted text-truncate" style="width: 300px"> {{getLastMessage(data.chats)}} </span>
+                    <span class="fs-7 text-truncate" style="width: 300px"
+                        [ngClass]="getNewMessages(data.chats) === 0 ? 'text-muted' : 'text-dark fw-bolder'"> {{getLastMessage(data.chats)}} </span>
+                    <span class="badge bg-primary text-white d-flex justify-content-center align-items-center rounded-circle fs-7" *ngIf="getNewMessages(data.chats) !== 0">
+                        {{getNewMessages(data.chats)}}
+                    </span>
                 </div>
             </div>
         </div>

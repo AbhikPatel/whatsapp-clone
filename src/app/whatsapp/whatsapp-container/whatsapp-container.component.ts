@@ -9,19 +9,39 @@ import { CommonService } from 'src/app/shared/services/common.service';
 })
 export class WhatsappContainerComponent implements OnInit {
 
-  public getChatsData:Observable<UserChat>
+  public getChatsData$: Observable<UserChat>
+  public getAllData$: Observable<UserChat[]>
 
   constructor(
     private _service: CommonService
-  ) { 
-    this.getChatsData = new Observable();
+  ) {
+    this.getChatsData$ = new Observable();
+    this.getAllData$ = new Observable();
   }
 
   ngOnInit(): void {
-    this._service.userId.subscribe((number) => this.getChatsData = this._service.getUserChats(number))
+    this.props();
   }
 
-  public getNewMessage(data:UserChat){
-    this._service.upDateChat(data.id, data).subscribe()
+  /**
+   * @name props
+   * @description This method is called in ngOnInit
+  */
+  public props() {
+    this._service.userId.subscribe((number) => {
+      this.getChatsData$ = this._service.getUserChats(number)
+
+      if (number === 0)
+        this.getAllData$ = this._service.getAllUserChats()
+    })
+  }
+
+  /**
+   * @name getNewMessage
+   * @param data 
+   * @description This method is called to call the update API
+   */
+  public getNewMessage(data: UserChat) {
+    this._service.upDateChat(data.id, data).subscribe(() => this._service.changesOnSidebar.next(true))
   }
 }

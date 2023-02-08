@@ -1,4 +1,5 @@
 <app-whatsapp-presentation
-    [getChats]="getChatsData | async"
+    [getChats]="getChatsData$ | async"
     (emitChat)="getNewMessage($event)"
+    [getSendersChat]="getAllData$ | async"
 ></app-whatsapp-presentation>

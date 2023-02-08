@@ -9,6 +9,9 @@
         </div>
     </div>
     <form class="form-container px-3 d-flex align-items-center" [formGroup]="chatGroup" (ngSubmit)="onSubmit()">
+        <select class="form-select me-3" *ngIf="show" style="width: 300px;" formControlName="sender">
+            <option [value]="data.firstName" [disabled]="data.id === 0" *ngFor="let data of usersData">{{ data.firstName }}</option>
+        </select>
         <input type="text" name="message" id="message" class="w-100 me-2 form-control" autocomplete="off"
             formControlName="content">
         <button role="button" type="submit" class="border-0 bg-transparent">

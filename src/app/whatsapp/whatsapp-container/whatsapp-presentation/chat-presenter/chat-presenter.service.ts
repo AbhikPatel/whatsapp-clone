@@ -20,15 +20,28 @@ export class ChatPresenterService {
 
   public getGroup(){
     return this._fb.group({
-      content:['', [Validators.required]]
+      content:['', [Validators.required]],
+      sender:['',]
     })
   }
 
   public getMessage(chat:any){
+    delete chat.sender
     let obj = {
       isSender:true,
       isSeen:false,
-      time:null
+      time:null,
+      newMessage:false
+    }
+    this.message.next(Object.assign(obj,chat))
+  }
+
+  public getClientMessage(chat:any){
+    let obj = {
+      isSender:false,
+      isSeen:false,
+      time:null,
+      newMessage:true
     }
     this.message.next(Object.assign(obj,chat))
   }

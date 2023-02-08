@@ -1,0 +1,17 @@
+.chat-container{
+    background-image: url('../../images/original.png');
+
+    .message{
+        padding: 0.6rem 4rem 0.6rem 0.6rem;
+        max-width: 60%;
+        &-sender{
+            background-color: #dff7ca;
+        }
+
+        &-time{
+            font-size: 0.7rem;
+            right: 3px;
+            bottom: 5px;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "firstName": "Sender",
+      "lastName": "",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "Send your message by selecting one user",
+          "isSender": true,
+          "time": "",
+          "newMessage": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "firstName": "Mrunal",
+      "lastName": "Patel",
+      "profile": "",
+      "chats": [
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "newMessage": false,
+          "content": "Hey",
+          "sender": "Mrunal"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "Mehul",
+      "lastName": "Patel",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "Hello There",
+          "isSender": true,
+          "time": "",
+          "newMessage": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "Jagdish",
+      "lastName": "Chaudhari",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "hello",
+          "isSender": true,
+          "time": "",
+          "newMessage": false
+        },
+        {
+          "isSender": true,
+          "isSeen": false,
+          "time": null,
+          "newMessage": false,
+          "content": "hello"
+        },
+        {
+          "isSender": false,
+          "isSeen": false,
+          "time": null,
+          "newMessage": false,
+          "content": "hello",
+          "sender": "Jagdish"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "firstName": "Sagar",
+      "lastName": "Patel",
+      "profile": "",
+      "chats": [
+        {
+          "isSeen": false,
+          "content": "Hu kai",
+          "isSender": true,
+          "time": "",
+          "newMessage": false
+        }
+      ]
+    }
+  ]
+}
